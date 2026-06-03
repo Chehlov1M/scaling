@@ -1,0 +1,14 @@
+[Внешний балансировщик нагрузки / API Gateway]
+     |
+     +------------------+------------------+------------------+
+     |                  |                  |
+[UsersDB Cluster]   [BooksDB Cluster]   [StoresDB Cluster]
+     |                  |                  |
+     +------------------+------------------+------------------+
+     |                  |                  |
+[UsersShardA] [UsersShardB]  [BooksShard1] [BooksShard2]  [StoresShardEU] [StoresShardUS]
+     |                  |                  |
+     +------------------+------------------+------------------+
+     |
+[Репликация (Master-Slave) для каждого шарда]
+
